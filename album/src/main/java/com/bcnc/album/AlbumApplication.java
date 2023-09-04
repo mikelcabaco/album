@@ -1,4 +1,4 @@
-package com.example.album;
+package com.bcnc.album;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
