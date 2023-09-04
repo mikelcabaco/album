@@ -2,12 +2,12 @@ package com.bcnc.album.infrastructure.common.exceptions;
 
 
 /**
- * Core checked exception to extend in application
+ * Core checked exception in application
  * 
  * @author BCNC
  * @since 1.0.0
  */
-public abstract class CoreException extends Exception {
+public class CoreException extends Exception {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 14443223432L;
@@ -20,7 +20,7 @@ public abstract class CoreException extends Exception {
 	 *
 	 * @param message the message
 	 */
-	protected CoreException(String message) {
+	public CoreException(String message) {
 		super(message);
 		this.errorMessage = message;
 	}

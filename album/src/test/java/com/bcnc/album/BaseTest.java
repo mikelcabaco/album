@@ -14,6 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 import com.bcnc.album.application.album.domain.Album;
 import com.bcnc.album.application.album.domain.Photo;
 import com.bcnc.album.application.album.repository.AlbumRepository;
+import com.bcnc.album.infrastructure.common.exceptions.CoreException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.annotation.PostConstruct;
@@ -43,9 +44,10 @@ public abstract class BaseTest {
 	
 	
 	
-	/** Mock calls to JSON Placeholder rest template. */
+	/** Mock calls to JSON Placeholder rest template. 
+	 * @throws CoreException */
 	@PostConstruct
-	private void initMocks() {
+	private void initMocks() throws CoreException {
 		var album = new Album();
 		album.setId(1L);
 		album.setUserId(1L);

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.bcnc.album.application.album.domain.Album;
 import com.bcnc.album.application.album.domain.Photo;
+import com.bcnc.album.infrastructure.common.exceptions.CoreException;
 
 
 /**
@@ -17,15 +18,17 @@ public interface AlbumRepository {
 	/**
 	 * Get all albums
 	 * @return {@link List}<{@link Album}> Album's list.
+	 * @throws CoreException 
 	 */
-	List<Album> findAll();
+	List<Album> findAll() throws CoreException;
 	
 	
 	/**
 	 * Get all photos in an album.
 	 * @param albumId {@link Long} album id
 	 * @return {@link List}<{@link Photo}> Photo's list in an album.
+	 * @throws CoreException 
 	 */
-	List<Photo> findPhotosByAlbumId(Long albumId);
+	List<Photo> findPhotosByAlbumId(Long albumId) throws CoreException;
 
 }

@@ -31,8 +31,9 @@ public class AlbumService {
 	/**
 	 * Get all albums
 	 * @return {@link List}<{@link Album}> Album's list.
+	 * @throws CoreException 
 	 */
-	public List<Album> findAll() {
+	public List<Album> findAll() throws CoreException {
 		return repository.findAll();
 	}
 	
